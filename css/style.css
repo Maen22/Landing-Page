@@ -61,6 +61,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
+  
 }
 
 .services {
@@ -73,6 +74,7 @@ body {
   font-family: "Aveni Next Demi Bold";
   color: black;
   opacity: 30%;
+  opacity: 0; /* change this*/
 }
 
 .service {
@@ -110,6 +112,7 @@ body {
   text-align: left;
   font-family: "Cormorant Garamond";
   color: #d3b150;
+  opacity: 0; /* change this*/
 }
 
 .company {
@@ -123,6 +126,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
   text-align: left;
   letter-spacing: 1.44px;
+  
 }
 
 .team {
@@ -135,4 +139,5 @@ body {
   font-family: "Aveni Next Regular";
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.32px;
+  opacity: 0; /* change this*/
 }
