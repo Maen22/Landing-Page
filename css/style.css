@@ -24,28 +24,32 @@
 
 body {
   /* make it look decent enough */
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(253, 253, 253);
   font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.outer-bg {
+  position: absolute;
+  opacity: 0.9;
+}
+
+.inner-bg {
+  position: absolute;
 }
 
 .outer {
   height: 667px;
   width: 375px;
-
-  background-image: url("../img/BACK-375.png");
-  background-size: cover;
-  background-position: top;
   position: relative;
 }
 
 .inner {
+  overflow: hidden;
   margin: 0 auto;
   height: 667px;
   width: 296px;
 
   background-image: url("../img/LINES-375.png");
-  background-size: cover;
-  background-position: top;
   position: relative;
 }
 
@@ -55,14 +59,14 @@ body {
   left: 27px;
   width: 64px;
   height: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
-.main {
+/* .main {
   position: relative;
-  top: 0;
+  top: -70px;
   left: 0;
-  
-}
+} */
 
 .services {
   position: absolute;
@@ -74,7 +78,7 @@ body {
   font-family: "Aveni Next Demi Bold";
   color: black;
   opacity: 30%;
-  opacity: 0; /* change this*/
+  transition: all 0.3s ease-in-out;
 }
 
 .service {
@@ -108,11 +112,11 @@ body {
   padding-top: 15px;
   width: 298px;
   height: 237px;
-  font-size: 52px;
+  font-size: 50px;
   text-align: left;
   font-family: "Cormorant Garamond";
   color: #d3b150;
-  opacity: 0; /* change this*/
+  transition: all 0.3s ease-in-out;
 }
 
 .company {
@@ -126,7 +130,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
   text-align: left;
   letter-spacing: 1.44px;
-  
+  transition: transform 0.3s ease-out;
 }
 
 .team {
@@ -139,5 +143,5 @@ body {
   font-family: "Aveni Next Regular";
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.32px;
-  opacity: 0; /* change this*/
+  transition: all 0.35s ease-in-out;
 }

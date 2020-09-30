@@ -11,9 +11,12 @@
   </head>
   <body>
     <div class="outer">
+      <div class="shadow"></div>
+      <img class="outer-bg" src="./img/BACK-375.png" alt="" />
       <div class="inner">
+        <img class="inner-bg" src="../img/LINES-375.png" alt="lines" />
+        <input type="checkbox" class="toggler" />
         <div class="menu-wrap">
-          <input type="checkbox" class="toggler" />
           <div class="hamburger"><div></div></div>
           <div class="menu">
             <div>
@@ -65,5 +68,23 @@
       </div>
       <img class="logo" src="./img/LOGO.png" alt="" />
     </div>
+    <script>
+      const toggler = document.querySelector(".toggler");
+      const logo = document.querySelector(".logo");
+
+      toggler.addEventListener("click", () => {
+        if (toggler.checked) {
+          logo.style["opacity"] = "0";
+          logo.style["transform"] = "translateY(-20px)";
+        }
+      });
+
+      toggler.addEventListener("click", () => {
+        if (!toggler.checked) {
+          logo.style["opacity"] = "1";
+          logo.style["transform"] = "translateY(0)";
+        }
+      });
+    </script>
   </body>
 </html>
