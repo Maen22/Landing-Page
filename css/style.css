@@ -378,8 +378,8 @@ body {
     height: 162px;
   }
 
-  .left-symbol,
-  .left-symbol-after {
+  .left-symbol {
+    position: relative;
     font-size: 14px;
     color: #b08610;
     font-family: Aveni Next Regular;
@@ -388,18 +388,24 @@ body {
   }
 
   .left-symbol-after {
+    position: absolute;
+    top: 10px;
+    left: 0;
     display: none;
     opacity: 0;
   }
 
-  .left-symbol:hover {
+  .left-symbol1 .left-symbol-1,
+  .left-symbol2 .left-symbol-2,
+  .left-symbol3 .left-symbol-3,
+  .left-symbol3 .left-symbol-3 {
     transform: translateY(-10px);
     opacity: 0;
   }
 
   .left-symbol:hover + .left-symbol-after {
     display: inline-block;
-    transform: translateY(10px);
+    transform: translateY(-10px);
     opacity: 1;
   }
 }
