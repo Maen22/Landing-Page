@@ -35,9 +35,8 @@
   right: 0;
   width: 37.2px;
   height: 2px;
-  background-color: #d3b150;
+  background-color: rgba(211, 177, 80, .4);
   transition: all 0.5s;
-  opacity: 0.8;
 }
 
 .menu-wrap .hamburger > div::before {
