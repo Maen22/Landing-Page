@@ -38,6 +38,12 @@
                   <li><a href="#">Contact us</a></li>
                 </ul>
               </div>
+              <div class="business">
+                Don't wait to take your project to the next level with WO
+                project Development Consultancy business coaching services.<br />Schedule
+                your free 20-minute consultation today and let's make your
+                business dreams a reality
+              </div>
               <div class="right-symbols">
                 <div class="symbol">wh</div>
                 <div class="symbol">ig</div>
@@ -120,6 +126,10 @@
       const toggler = document.querySelector(".toggler");
       const logo = document.querySelector(".logo");
 
+      const recentWork = document.querySelector(".recent-work");
+
+      const recentWork = document.querySelector(".tall-line");
+
       toggler.addEventListener("click", () => {
         if (toggler.checked) {
           logo.style["opacity"] = "0";
@@ -131,6 +141,20 @@
         if (!toggler.checked) {
           logo.style["opacity"] = "1";
           logo.style["transform"] = "translateY(0)";
+        }
+      });
+
+      toggler.addEventListener("click", () => {
+        if (toggler.checked) {
+          logo.style["transform"] = "translateY(-40px)";
+          recentWork.style["opacity"] = "0";
+        }
+      });
+
+      toggler.addEventListener("click", () => {
+        if (!toggler.checked) {
+          logo.style["transform"] = "translateY(40px)";
+          recentWork.style["opacity"] = "1";
         }
       });
     </script>

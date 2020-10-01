@@ -76,6 +76,7 @@
   text-decoration: none;
   transition: color 0.4s ease;
 }
+
 .main-menu {
   position: absolute;
   top: 99px;
@@ -330,16 +331,16 @@
     transition: color 0.4s ease;
   }
   .main-menu {
-    position: absolute;
-    top: 99px;
-    left: 1px;
+    position: fixed;
+    top: 74px;
+    left: 200px;
     width: 270px;
-    height: 352px;
-    font-size: 35px;
+    height: 500px;
+    font-size: 50px;
     font-family: "Cormorant Garamond";
-    transform: translateX(-200px);
+    /*transform: translateX(-200px);*/
     transition: all 0.4s ease-in-out;
-    opacity: 0;
+    /*opacity: 0;*/
   }
 
   .main-menu ul {
@@ -347,7 +348,7 @@
   }
 
   .main-menu ul li {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
   }
 
   .main-menu ul li a {
@@ -356,26 +357,13 @@
   }
 
   .right-symbols {
-    position: absolute;
-    top: 186px;
-    right: 0;
-    width: 20px;
-    height: 180px;
-    text-align: center;
-    transform: translateX(50px);
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .right-symbols .symbol {
-    margin-bottom: 35px;
-    color: #d3b150;
+    display: none;
   }
 
   .location {
-    position: absolute;
-    top: 550.86px;
-    left: 0;
+    position: fixed;
+    top: 532px;
+    left: 616.34px;
     width: 127px;
     height: 16px;
     font-size: 12px;
@@ -401,8 +389,13 @@
   }
 
   .toggler:checked + div + main .company {
-    transform: translateY(31px);
+    transform: translateY(0);
     visibility: visible;
+  }
+
+  .toggler:checked + div + main .wht-can-we-do {
+    transform: translateY(150px);
+    opacity: 0;
   }
 
   .toggler:checked + div + main .location {
@@ -413,12 +406,46 @@
 
   .toggler:checked + div + main .team {
     opacity: 0;
-    transform: translateY(31px);
+    transform: translateY(5px);
   }
 
   .toggler:checked + div + main .services,
   .toggler:checked + div + main .hero {
     transform: translateY(-20px);
+    display: none;
+  }
+
+  .toggler:checked + div + main .line {
+    visibility: visible;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 415px;
+    background-color: #d3b150;
+    width: 2px;
+    height: 680px;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .business {
+    position: fixed;
+    top: 156px;
+    left: 616px;
+    width: 289px;
+    height: 188px;
+    font-size: 16px;
+    font-family: "Aveni Next Regular";
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.32px;
+    transform: translateX(-100px);
+    transition: all 0.5s;
+    display: inline-block;
     opacity: 0;
+  }
+
+  .toggler:checked + div div .business {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

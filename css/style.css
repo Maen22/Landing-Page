@@ -56,7 +56,8 @@ body {
 }
 
 .menu-text,
-.menu-text-after {
+.menu-text-after,
+.menu-text-back {
   display: none;
 }
 
@@ -240,7 +241,7 @@ body {
   }
 
   .recent-work {
-    display: block;
+    display: inline-block;
     position: absolute;
     top: 47.52px;
     right: 41.56px;
@@ -251,6 +252,7 @@ body {
     width: 102px;
     height: 22px;
     letter-spacing: 1.4px;
+    transition: all 0.3s;
   }
 
   .real-work,
@@ -332,6 +334,7 @@ body {
     text-align: left;
     letter-spacing: 1.6px;
     color: #b08610;
+    transition: all 0.3s;
   }
 
   .real-wht-can,
@@ -378,34 +381,72 @@ body {
     height: 162px;
   }
 
-  .left-symbol {
-    position: relative;
+  .left-symbol1,
+  .left-symbol2,
+  .left-symbol3,
+  .left-symbol4 {
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 19px;
     font-size: 14px;
     color: #b08610;
     font-family: Aveni Next Regular;
-    margin-bottom: 22px;
-    transition: all 0.3s;
+  }
+
+  .left-symbol1 {
+    top: 0;
+  }
+
+  .left-symbol2 {
+    top: 41px;
+  }
+  .left-symbol3 {
+    top: 82px;
+  }
+
+  .left-symbol4 {
+    top: 123px;
+  }
+
+  .left-symbol-1,
+  .left-symbol-2,
+  .left-symbol-3,
+  .left-symbol-4 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 13px;
+    height: 19px;
+    transition: all 0.5s;
   }
 
   .left-symbol-after {
     position: absolute;
     top: 10px;
     left: 0;
-    display: none;
+    width: 13px;
+    height: 19px;
+    display: inline-block;
     opacity: 0;
+    transition: all 0.5s;
   }
 
-  .left-symbol1 .left-symbol-1,
-  .left-symbol2 .left-symbol-2,
-  .left-symbol3 .left-symbol-3,
-  .left-symbol3 .left-symbol-3 {
+  .left-symbol1:hover > .left-symbol-1,
+  .left-symbol2:hover > .left-symbol-2,
+  .left-symbol3:hover > .left-symbol-3,
+  .left-symbol4:hover > .left-symbol-4 {
     transform: translateY(-10px);
     opacity: 0;
   }
 
-  .left-symbol:hover + .left-symbol-after {
-    display: inline-block;
+  .left-symbol1:hover > .left-symbol-after,
+  .left-symbol2:hover > .left-symbol-after,
+  .left-symbol3:hover > .left-symbol-after,
+  .left-symbol4:hover > .left-symbol-after {
     transform: translateY(-10px);
     opacity: 1;
   }
+
+  
 }
