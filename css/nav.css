@@ -35,7 +35,7 @@
   right: 0;
   width: 37.2px;
   height: 2px;
-  background-color: rgba(211, 177, 80, .4);
+  background-color: rgba(211, 177, 80, 0.4);
   transition: all 0.5s;
 }
 
@@ -167,4 +167,258 @@
 .toggler:checked + div + main .hero {
   transform: translateY(-20px);
   opacity: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-wrap {
+    position: absolute;
+    top: 194px;
+    right: -20px;
+    width: 20px;
+    height: 150px;
+    font-size: 14px;
+    font-family: "Avenir Next Ultra Light";
+    z-index: 1;
+  }
+  .toggler {
+    position: absolute;
+    top: 250px;
+    right: -20px;
+    z-index: 2;
+    cursor: pointer;
+    width: 20px;
+    height: 150px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    background-color: rgba(176, 134, 16, 0.4);
+    transition: all 0.5s;
+  }
+
+  /* Hamburger Lines - Right */
+  .menu-wrap .hamburger > div::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 9px;
+    width: 1px;
+    height: 40px;
+    background-color: inherit;
+  }
+
+  .menu-wrap .hamburger > div::before {
+    transition: all 0.5s;
+  }
+
+  /* Toggler Animation */
+  .toggler:checked + .menu-wrap .hamburger > div {
+    transform: rotate(45deg);
+  }
+
+  /* Turns Lines Into X */
+  .toggler:checked + .menu-wrap .hamburger > div::before {
+    width: 1px;
+    left: -1px;
+    transform: rotate(-90deg);
+  }
+
+  .toggler:hover + .menu-wrap .hamburger > div {
+    transform: translateY(-10px);
+  }
+
+  /* Turns Lines Into X */
+  .toggler:hover + .menu-wrap .hamburger > div::before {
+    transform: translateY(10px);
+  }
+
+  .toggler:checked:hover + .menu-wrap .hamburger > div {
+    transform: rotate(45deg);
+  }
+
+  /* Turns Lines Into X */
+  .toggler:checked:hover + .menu-wrap .hamburger > div::before {
+    width: 1px;
+    left: -1px;
+    transform: rotate(-90deg);
+  }
+
+  .toggler:checked + div .menu-text {
+    display: none;
+  }
+
+  .toggler:checked + div .menu-text-after {
+    display: none;
+  }
+
+  .menu-text-back {
+    writing-mode: tb-rl;
+    display: inline-block;
+    position: absolute;
+    top: 125px;
+    left: 12px;
+    width: 3px;
+    height: 45px;
+    text-align: left;
+    color: rgba(176, 134, 16, 0.4);
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .toggler:checked:hover + div .menu-text-back {
+    opacity: 1;
+  }
+
+  .menu-wrap .menu-text {
+    writing-mode: tb-rl;
+    display: inline-block;
+    position: absolute;
+    top: 125px;
+    left: 12px;
+    width: 3px;
+    height: 45px;
+    text-align: left;
+    color: rgba(176, 134, 16, 0.4);
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-text-after {
+    writing-mode: tb-rl;
+    display: inline-block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 3px;
+    height: 45px;
+    text-align: left;
+    color: rgba(176, 134, 16, 0.4);
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .toggler:hover + .menu-wrap .menu-text {
+    transform: translateX(12px);
+    opacity: 0;
+  }
+
+  .toggler:hover + .menu-wrap .menu-text-after {
+    transform: translateX(12px);
+    opacity: 1;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  .main-menu {
+    position: absolute;
+    top: 99px;
+    left: 1px;
+    width: 270px;
+    height: 352px;
+    font-size: 35px;
+    font-family: "Cormorant Garamond";
+    transform: translateX(-200px);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+  }
+
+  .main-menu ul {
+    list-style: none;
+  }
+
+  .main-menu ul li {
+    margin-bottom: 23px;
+  }
+
+  .main-menu ul li a {
+    text-decoration: none;
+    color: #d3b150;
+  }
+
+  .right-symbols {
+    position: absolute;
+    top: 186px;
+    right: 0;
+    width: 20px;
+    height: 180px;
+    text-align: center;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .right-symbols .symbol {
+    margin-bottom: 35px;
+    color: #d3b150;
+  }
+
+  .location {
+    position: absolute;
+    top: 550.86px;
+    left: 0;
+    width: 127px;
+    height: 16px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .toggler:checked + div + main {
+    visibility: hidden;
+  }
+  .toggler:checked + div > .menu {
+    visibility: visible;
+  }
+  .toggler:checked + div > .menu .main-menu {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .toggler:checked + div > .menu .right-symbols {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .toggler:checked + div + main .company {
+    transform: translateY(31px);
+    visibility: visible;
+  }
+
+  .toggler:checked + div + main .location {
+    transition: all 1s ease;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .toggler:checked + div + main .team {
+    opacity: 0;
+    transform: translateY(31px);
+  }
+
+  .toggler:checked + div + main .services,
+  .toggler:checked + div + main .hero {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 }
