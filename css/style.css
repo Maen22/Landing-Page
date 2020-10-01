@@ -1,8 +1,3 @@
-:root {
-  --primary-color: rgba(13, 110, 139, 0.75);
-  --overlay-color: rgba(24, 39, 51, 0.85);
-  --menu-speed: 0.75s;
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
 
@@ -16,10 +11,13 @@
   src: url("../fonts/AvenirNext-Regular.ttf");
 }
 
-* {
+*,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -85,7 +83,7 @@ body {
 .service-2,
 .service-3 {
   display: inline-block;
-  transition: all 0.1s;
+  transition: all 0.5s;
   visibility: visible;
 }
 
@@ -101,43 +99,33 @@ body {
   width: 76px;
 }
 
-.service-1::after,
-.service-2::after,
-.service-3::after {
+.service-1-after,
+.service-2-after,
+.service-3-after {
+  display: inline-block;
   color: rgba(211, 177, 80, 1);
   position: absolute;
   top: 10px;
   left: 0;
   height: 100%;
   width: 100%;
+  opacity: 0;
   transform: translateY(10px);
-  visibility: hidden;
-}
-
-.service-1::after {
-  content: "STRATEGY";
-}
-
-.service-2::after {
-  content: "DESIGN";
-}
-
-.service-3::after {
-  content: "MARKETING";
+  transition: all 0.5s;
 }
 
 .service1:hover .service-1,
 .service2:hover .service-2,
 .service3:hover .service-3 {
   transform: translateY(-15px);
-  visibility: hidden;
+  opacity: 0;
 }
 
-.service1:hover .service-1::after,
-.service2:hover .service-2::after,
-.service3:hover .service-3::after {
-  transform: translateY(5px);
-  visibility: visible;
+.service1:hover .service-1-after,
+.service2:hover .service-2-after,
+.service3:hover .service-3-after {
+  transform: translateY(-10px);
+  opacity: 1;
 }
 
 .dot {
