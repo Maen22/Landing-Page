@@ -62,28 +62,31 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* .main {
-  position: relative;
-  top: -70px;
-  left: 0;
-} */
-
 .services {
   position: absolute;
-  width: 237px;
+  width: 260px;
   height: 34px;
   top: 155px;
   left: 3px;
   font-size: 10px;
   font-family: "Aveni Next Demi Bold";
-  color: black;
-  opacity: 30%;
+  color: rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
 .service {
+  position: relative;
   height: 14px;
   letter-spacing: 1px;
+  display: inline-block;
+}
+
+.service-1,
+.service-2,
+.service-3 {
+  display: inline-block;
+  transition: all 0.1s;
+  visibility: visible;
 }
 
 .service-1 {
@@ -96,6 +99,45 @@ body {
 
 .service-3 {
   width: 76px;
+}
+
+.service-1::after,
+.service-2::after,
+.service-3::after {
+  color: rgba(211, 177, 80, 1);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateY(10px);
+  visibility: hidden;
+}
+
+.service-1::after {
+  content: "STRATEGY";
+}
+
+.service-2::after {
+  content: "DESIGN";
+}
+
+.service-3::after {
+  content: "MARKETING";
+}
+
+.service1:hover .service-1,
+.service2:hover .service-2,
+.service3:hover .service-3 {
+  transform: translateY(-15px);
+  visibility: hidden;
+}
+
+.service1:hover .service-1::after,
+.service2:hover .service-2::after,
+.service3:hover .service-3::after {
+  transform: translateY(5px);
+  visibility: visible;
 }
 
 .dot {
